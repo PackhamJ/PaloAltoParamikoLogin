@@ -1,6 +1,6 @@
 #This is the main method application that is designed to call many other functions
 #By calling other methods this app will ssh into a Palo Alto Firewall(May work on other boxes) run a command and pull information from the command that was run
-#@author Jordan Packham viry2k@gmail.com
+#@author Jordan Packham viry2kphone@gmail.com
 #version .082 (This is the current version)
 #Since    .000001 (Version number that this method was added to the PaloAltoParamikoLogin class)
 #@param arrayValue will read and store the contents of file.txt
