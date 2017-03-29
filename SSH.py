@@ -1,4 +1,4 @@
-#@author Jordan Packham viry2k@gmail.com
+#@author Jordan Packham viry2kphone@gmail.com
 #version .082 (This is the current version)
 #Since    .000001 (Version number that this method was added to the PaloAltoParamikoLogin class)
 #This method is made to SSH into a firewall input some show command and output the info to console as well as return the value of the output.
