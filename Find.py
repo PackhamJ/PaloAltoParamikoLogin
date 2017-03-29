@@ -1,5 +1,5 @@
 #This method takes two inputs and searches for a string and returns the entire line that contains that string
-#@author Jordan Packham viry2k@gmail.com
+#@author Jordan Packham viry2kphone@gmail.com
 #version .082 (This is the current version)
 #Since    .000001 (Version number that this method was added to the PaloAltoParamikoLogin class)
 #@param findWhat: This is the parameter that it will be looking for
