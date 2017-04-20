@@ -26,7 +26,7 @@ def connectToDevice(ip, sshCommand):
 		
 		channel.send(sshCommand)
 		output3 = channel.recv(1000000)
-		print output3
+		print output3    #Output what is sent from the device when you first connect
 		
 		time.sleep(10)
 		channel.send('q')
@@ -36,7 +36,7 @@ def connectToDevice(ip, sshCommand):
 		channel.send('exit\n')
 		time.sleep(.5)
 		output2 = channel.recv(10000)
-		#print output2
+		#print output2   # This will output comes after you send the SShcommand
 		time.sleep(10)
 		return output2
 		
