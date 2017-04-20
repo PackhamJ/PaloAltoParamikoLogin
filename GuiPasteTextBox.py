@@ -15,35 +15,24 @@ import time
 import ReadFile
 import Find
 import WriteOutput
-
-
-
-arrayValue = ReadFile.openFile("file.txt")
-command = 'show system info\n'
-findSomething = 'sw-version'
-
 def findSWVersion():
-	findSomething = 'sw-version'
-	
-	
+	runScript("sw-version")
 	
 def findModel():
-	findSomething = 'model'
+	runScript("model")
 	
+def findSerialNumber(): 
+	runScript("serial")
 	
-def findSerialNumber():
-	findSomething = 'serial'
-	
-
-def runScript():	
+def runScript(findsomething):
+	command = 'show system info\n'
 	inputValue = text_entry.get("1.0","end-1c")
-	print inputValue 
+	arrayValue = ReadFile.openFile("file.txt") 
 	inputArray = inputValue.splitlines()
-	print inputArray 
 	for x in inputArray:
 		print x
 		sshOutput = SSH.connectToDevice(x, command)
-		valueFound = Find.findString(findSomething, sshOutput)
+		valueFound = Find.findString(findsomething, sshOutput)
 		WriteOutput.appendOutput(valueFound, x, 'output.txt')
 		print "Output written to output.txt"
 	
@@ -59,8 +48,8 @@ button_3 = Button(root, text="Find Serial Number", command=findSerialNumber)
 button_3.grid(row=3, column=0)
 
 
-button_4 = Button(root, text="Run Script", command=runScript)
-button_4.grid(row=4, column=0)
+#button_4 = Button(root, text="Run Script", command=runScript)
+#button_4.grid(row=4, column=0)
 
 
 
